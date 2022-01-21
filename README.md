@@ -13,7 +13,7 @@ docker run -d --name matrix-push \
     -v /opt/matrix-push:/data \
     -p 5000:5000 \
     --restart unless-stopped \
-    bastiandietrich/matrix-push:latest
+    registry.gudd-it.de/bastian/matrix-push:latest
 ```
 
 ### Configuration
