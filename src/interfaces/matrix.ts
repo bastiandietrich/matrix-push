@@ -5,7 +5,7 @@ export interface Notification {
   counts?: Counts;
   devices: Device[];
   event_id?: string;
-  prio?: "high" | "low";
+  prio?: 'high' | 'low';
   room_alias?: string;
   room_id?: string;
   room_name?: string;
