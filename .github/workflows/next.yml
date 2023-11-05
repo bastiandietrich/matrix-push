@@ -1,4 +1,4 @@
-name: ci
+name: Docker Images
 
 env:
   REGISTRY: ghcr.io
