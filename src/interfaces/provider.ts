@@ -1,9 +1,4 @@
-import { Notification, ProviderConfiguration } from '.';
-
-export interface ProviderResult {
-  sent: boolean;
-  pushkey: string[];
-}
+import { Device, Notification, ProviderConfiguration } from '.';
 
 export abstract class Provider {
   appId: string;
@@ -12,5 +7,5 @@ export abstract class Provider {
     this.appId = providerConfiguration.appId;
   }
 
-  abstract send(request: Notification): Promise<ProviderResult>;
+  abstract send(request: Notification, device: Device): Promise<boolean>;
 }

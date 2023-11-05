@@ -23,7 +23,8 @@ const pushRoute = async (body: any): Promise<RouteResult> => {
 
   const notification = body.notification as Notification;
   for await (const device of notification.devices) {
-    const result = await providers.get(device.app_id)?.send(notification);
+    const isSent = await providers.get(device.app_id)?.send(notification, device) ?? false;
+    !isSent && rejectedPushKeys.push(device.pushkey);
   }
 
   return {
