@@ -1,4 +1,4 @@
-import { DeliverResult, DeliverRquest, Provider, ProviderConfiguration } from "../interfaces";
+import { ProviderResult, Notification, Provider, ProviderConfiguration } from '../interfaces';
 import {Provider as PushClient} from 'apn';
 
 // structure of the configuration for this provider
@@ -17,7 +17,7 @@ export class AppleProvider extends Provider {
 
     // check the configuration
     if (!(config.keyPath && config.keyId && config.teamId)) {
-      console.error("Misconfigured apple provider.");
+      console.error('Misconfigured apple provider.');
       process.exit(1);
     }
 
@@ -32,7 +32,7 @@ export class AppleProvider extends Provider {
     });
   }
 
-  send(request: DeliverRquest): Promise<DeliverResult> {
+  async send(request: Notification): Promise<ProviderResult> {
     return Promise.reject('Not implemented!');
   }
 }
