@@ -6,6 +6,6 @@ WORKDIR /usr/src/app
 ENV NODE_ENV=production
 COPY package.json bun.lockb src/ ./
 
-RUN bun install --no-cache -p
+RUN bun install --no-cache --frozen-lockfile -p
 
 ENTRYPOINT [ "bun", "app.ts" ]
