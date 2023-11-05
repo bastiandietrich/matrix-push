@@ -1,7 +1,8 @@
-import { parse } from 'yaml'
+import { parse } from 'yaml';
 import { AppConfiguration } from '../interfaces';
 
-const readYAML = (path: string) => Bun.file(path).text().then(text => parse(text));
+const readYAML = (path: string) => Bun.file(path).text()
+  .then(text => parse(text));
 
 const getConfiguration = async () => {
   // read configuration from environment path or default path
@@ -12,7 +13,6 @@ const getConfiguration = async () => {
     server: {
       port: 3000
     },
-    provider: [],
     ...file,
   };
 };
