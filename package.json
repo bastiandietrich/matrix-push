@@ -1,21 +1,22 @@
 {
   "name": "matrix-push",
   "version": "1.0.0",
-  "description": "Push Gateway for Matrix Synapse",
   "author": "Bastian Dietrich <bastian@dietr.de>",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bastiandietrich/matrix-push.git"
   },
+  "module": "src/app.ts",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "description": "Push Gateway for Matrix Synapse",
+  "type": "module",
   "dependencies": {
     "apn": "^2.2.0",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "js-yaml": "^4.0.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7",
-    "standard": "*"
+    "yaml": "^2.3.4"
   }
 }

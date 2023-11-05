@@ -1,20 +1,11 @@
 # matrix-push
 
-**Not yet ready for production use since only APN is implemented.**
+** WIP! This repository is under active development **
 
 matrix-push is a simple Push Gateway for [Matrix](https://matrix.org).
-[https://matrix.org/docs/spec/push_gateway/r0.1.0](https://matrix.org/docs/spec/push_gateway/r0.1.0) describes the implemented protocol.
+[https://spec.matrix.org/v1.8/push-gateway-api/](https://spec.matrix.org/v1.8/push-gateway-api/) describes the implemented protocol.
 
 The server only reacts on POST-requests to /_matrix/push/v1/notify. It's recommended to run this behind a reverse proxy.
-
-### Installation with Docker
-```
-docker run -d --name matrix-push \
-    -v /opt/matrix-push:/data \
-    -p 5000:5000 \
-    --restart unless-stopped \
-    registry.gudd-it.de/bastian/matrix-push:latest
-```
 
 ### Configuration
 You'll need to create a config.yml and upload the key files in the directory mounted on /data:
