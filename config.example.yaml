@@ -1,0 +1,16 @@
+server:
+  port: 3000
+
+# Firebase Cloud Messagaing
+# the client needs GOOGLE_APPLICATION_CREDENTIALS env with path to json
+fcm:
+  - appId: com.example.app.android
+
+# Apple Push Notifications
+apn:
+  - appId: com.example.app.ios
+    topic: com.example.app
+    keyPath: /app/key.p8
+    keyId: xxx
+    teamId: xxx
+    production: true
