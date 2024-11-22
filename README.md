@@ -1,3 +1,11 @@
+# Deprecation Notice
+
+This repository has been **archived** and is no longer maintained.  
+
+The project was initially created as an experiment to explore how a Matrix Push Gateway works. However, as I no longer require this functionality, I have decided to discontinue its development.  
+
+Feel free to explore the code, but please note that it may not reflect the best practices or standards.  
+
 # matrix-push
 
 **Not yet ready for production use since only APN is implemented.**
